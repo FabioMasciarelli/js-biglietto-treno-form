@@ -23,7 +23,7 @@ btn.addEventListener("click", function () {
         discount = (variableKm * userKm) * (youngDiscount / 100); 
     } else if (userAge === "over65") {
         discount = (variableKm * userKm) * (oldDiscount / 100); 
-    } else {
+    } else if (userAge === "maggiorenne") {
         discount = (variableKm * userKm);
     }
     console.log(discount);
@@ -31,14 +31,14 @@ btn.addEventListener("click", function () {
     const number = (variableKm * userKm) - discount;
     
     const outputPrice = number.toFixed(2);
+    console.log(outputPrice);
 
     document.querySelector(".output-name").innerHTML = userName;
     document.querySelector(".output-km").innerHTML = userKm;
     document.querySelector(".price").innerHTML = outputPrice;
 
     let output = document.querySelector(".ticket-output");
-    output.classList.add("flex");
-
+    output.classList.add("block");
 
 });
 

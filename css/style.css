@@ -11,25 +11,79 @@ body {
     gap: 20px;
 }
 
-.ticket-input {
+input {
+    padding: 5px;
+    border: 0;
+}
+
+select {
+    border: 0;
+    padding: 5px;
+}
+
+/* UTILITIES */
+.t-white {
+    color: white;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.d-flex {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.gap-15 {
+    gap: 15px;
+}
+
+/* BODY */
+.ticket-input {
+    min-height: 300px;
     padding: 15px;
     background-color: lightblue;
     border-radius: 20px;
 }
 
+.m-top{
+    margin-top:70px;
+}
+
+#form-btn {
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background-color: blue;
+}
+
 .ticket-output {
-    height: 100px;
+    height: 200px;
     padding: 15px;
     display: none;
-    justify-content: space-evenly;
-    background-color: cornflowerblue;
+    background-color:darkred;
     border-radius: 20px;
 }
 
-.flex {
+.block {
+    display: block;
+}
+
+.col {
+    gap: 10px;
+    width: calc(100% / 3);
     display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.inner-col {
+    background-color: white;
+    padding:20px;
+    border-radius: 10px;
 }
