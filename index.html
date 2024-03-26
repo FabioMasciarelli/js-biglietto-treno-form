@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treno</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
-    <div id="result">
 
+<body>
+
+    <div class="ticket-input">
+        <div class="user-ask">
+            <input type="text" id="username" placeholder="qual'è il nome del passeggero?">
+            <label for="username"></label>
+            <input type="text" id="userKm" placeholder="quanti Km vuoi effettuare?">
+            <label for="userKm"></label>
+            <input type="text" id="userAge" placeholder="quanti anni hai?">
+            <label for="userAge"></label>
+        </div>
+        <div class="btn">
+            <button id="form-btn">Scopri il prezzo del tuo biglietto!</button>
+        </div>
+    </div>
+    <div class="ticket-output">
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
