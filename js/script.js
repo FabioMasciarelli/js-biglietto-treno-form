@@ -4,29 +4,44 @@
 const variableKm = 0.21; // number
 const youngDiscount = 20; // number
 const oldDiscount = 40; // number
-let discount ="";
+let discount = 0;
 
 const btn = document.getElementById("form-btn");
-console.log(btn);
 
 btn.addEventListener("click", function () {
-    if (userAge < 18 && userAge > 0) {
+    console.log(btn);
+    //raccolta dati
+    let userAge = document.getElementById("userage").value;
+
+    let userName = document.getElementById("username").value;
+
+    let userKm = document.getElementById("userkm").value;
+    userKm = parseInt(userKm); // number
+    console.log(userKm, typeof userKm);
+
+    if (userAge === "minorenne") {
         discount = (variableKm * userKm) * (youngDiscount / 100); 
-    } else if (userAge > 65) {
+    } else if (userAge === "over65") {
         discount = (variableKm * userKm) * (oldDiscount / 100); 
     } else {
         discount = (variableKm * userKm);
     }
+    console.log(discount);
+
+    const number = (variableKm * userKm) - discount;
+    
+    const outputPrice = number.toFixed(2);
+
+    document.querySelector(".output-name").innerHTML = userName;
+    document.querySelector(".output-km").innerHTML = userKm;
+    document.querySelector(".price").innerHTML = outputPrice;
+
+    let output = document.querySelector(".ticket-output");
+    output.classList.add("flex");
+
+
 });
 
-
-const finalPrice = (variableKm * userKm) - discount;
-
-
-const number = finalPrice.toFixed(2);
-
-finalMessage = `Abbiamo calcolato il prezzo del tuo biglietto ed è di: ${number} €`; // string
-document .getElementById("result") .innerHTML = finalMessage;
 
 
 

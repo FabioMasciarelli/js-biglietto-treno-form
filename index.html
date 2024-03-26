@@ -14,19 +14,24 @@
         <div class="user-ask">
             <input type="text" id="username" placeholder="qual'è il nome del passeggero?">
             <label for="username"></label>
-            <input type="text" id="userKm" placeholder="quanti Km vuoi effettuare?">
+            <input type="text" id="userkm" placeholder="quanti Km vuoi effettuare?">
             <label for="userKm"></label>
-            <input type="text" id="userAge" placeholder="quanti anni hai?">
-            <label for="userAge"></label>
+            <select name="" id="userage">
+                <option value="">Per favore, seleziona età</option>
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="minorenne">Minorenne</option>
+                <option value="over65">65+</option>
+            </select>
+            <label for="userage"></label>
         </div>
         <div class="btn">
             <button id="form-btn">Scopri il prezzo del tuo biglietto!</button>
         </div>
     </div>
     <div class="ticket-output">
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="output-name"></div>
+        <div class="output-km"></div>
+        <div class="price"></div>
     </div>
 
     <script src="js/script.js"></script>

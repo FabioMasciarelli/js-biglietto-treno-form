@@ -24,8 +24,12 @@ body {
 .ticket-output {
     height: 100px;
     padding: 15px;
-    display: flex;
+    display: none;
     justify-content: space-evenly;
     background-color: cornflowerblue;
     border-radius: 20px;
+}
+
+.flex {
+    display: flex;
 }
